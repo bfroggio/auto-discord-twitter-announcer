@@ -35,7 +35,7 @@ while True:
             #  print(tweet.id)
             tweet_link="https://twitter.com/"+username+"/status/"+str(tweet.id)
             webhook = Webhook.from_url(secrets.discord_webhook, adapter=RequestsWebhookAdapter())
-            #  webhook.send(tweet_link)
-            print(tweet_link)
+            webhook.send(tweet_link)
+            #  print(tweet_link)
 
     time.sleep(5)
