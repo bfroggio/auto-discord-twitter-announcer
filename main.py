@@ -27,10 +27,10 @@ while True:
 
             #  print(resp.headers["Location"])
 
-            if "twitch.tv" in resp.headers["Location"]:
+            if "Location" in resp.headers and "twitch.tv/bfroggio" in resp.headers["Location"]:
                 contains_twitch_link= True
 
-        if contains_twitch_link or "#announcement" in tweet:
+        if contains_twitch_link or "#announcement" in tweet.text:
             last_announced_tweet= tweet.id
             #  print(tweet.id)
             tweet_link="https://twitter.com/"+username+"/status/"+str(tweet.id)
