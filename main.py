@@ -13,7 +13,7 @@ api = tweepy.Client(secrets.bearer_token, secrets.consumer_key, secrets.consumer
 last_announced_tweet=0
 
 while True:
-    tweets_list= api.get_users_tweets(id=user_id) # Get the latest tweets
+    tweets_list= api.get_users_tweets(id=user_id, max_results=5) # Get the latest tweets
     tweet= tweets_list[0][0] # Grab the most recent tweet
 
     #  print(tweet)
