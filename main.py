@@ -38,4 +38,4 @@ while True:
             webhook.send(tweet_link)
             #  print(tweet_link)
 
-    time.sleep(5)
+    time.sleep(60)
